@@ -167,7 +167,7 @@ int main( int argc, char* args[] )
     if (r % 2 == 0 || c % 2 == 0) { return 0;}
     w = SCREEN_WIDTH / c, h = SCREEN_HEIGHT / r;
     srand((unsigned)time(0));
-    st.f = ((2 * rand()) + 1) % r, st.s = ((2 * rand()) + 1) % c;
+    st.f = ((2 * rand()) + 1) % (r+1), st.s = ((2 * rand()) + 1) % (c + 1);
     cout << st.first << " " << st.second << endl;
     prim(st);
     //GUI starts here
